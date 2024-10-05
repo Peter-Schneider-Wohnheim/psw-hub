@@ -15,6 +15,25 @@ jobs:
         with:
             lfs: 'true'
 
+      - name: Generate config.php with hard-coded secrets
+        run: |
+          mkdir -p includes/config
+          echo "<?php" > includes/config/config.php
+          echo "define('REDIRECT_URI', '${{ secrets.REDIRECT_URI }}');" >> includes/config/config.php
+          echo "define('AUTHORIZE_URL', '${{ secrets.AUTHORIZE_URL }}');" >> includes/config/config.php
+          echo "define('CLIENT_ID', '${{ secrets.CLIENT_ID }}');" >> includes/config/config.php
+          echo "define('CLIENT_SECRET', '${{ secrets.CLIENT_SECRET }}');" >> includes/config/config.php
+          echo "define('TOKEN_URL', '${{ secrets.TOKEN_URL }}');" >> includes/config/config.php
+          echo "define('USER_ENDPOINT', '${{ secrets.USER_ENDPOINT }}');" >> includes/config/config.php
+          echo "define('LOGOUT_URL', '${{ secrets.LOGOUT_URL }}');" >> includes/config/config.php
+          echo "define('NUKI_API_KEY', '${{ secrets.NUKI_API_KEY }}');" >> includes/config/config.php
+          echo "define('SMARTLOCK_ID', '${{ secrets.SMARTLOCK_ID }}');" >> includes/config/config.php
+          echo "define('mrbsDBServer', '${{ secrets.MRBS_DB_SERVER }}');" >> includes/config/config.php
+          echo "define('mrbsDBName', '${{ secrets.MRBS_DB_NAME }}');" >> includes/config/config.php
+          echo "define('mrbsDBUser', '${{ secrets.MRBS_DB_USER }}');" >> includes/config/config.php
+          echo "define('mrbsDBPassword', '${{ secrets.MRBS_DB_PASSWORD }}');" >> includes/config/config.php
+          echo "define('PROD', true);" >> includes/config/config.php
+
       - name: 📂 Sync files
         uses: pressidium/lftp-mirror-action@v1
         with:
