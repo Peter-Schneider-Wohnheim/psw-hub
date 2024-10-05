@@ -38,6 +38,10 @@ function grantAccess($reservationId, $startTime, $endTime, $code){
         'type' => 13,
         'allowedFromDate' => $startTime,
         'allowedUntilDate' => $endTime,
+        'allowedFromTime' => 0,
+        'allowedUntilTime' => 0,
+        'allowedWeekDays' => 127,
+        'remoteAllowed' => false,
         'enabled' => true,
         'code' => $code
     ];

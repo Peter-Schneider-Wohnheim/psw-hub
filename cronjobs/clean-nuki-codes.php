@@ -3,13 +3,21 @@ require_once(dirname(__DIR__) . '/keychain/kitchen.inc.php');
 
 $allGrants = getGrants();
 
-$filteredObjects = [];
+$filteredGrants = [];
 
 foreach ($allGrants as $grant) {
     // Check if the name contains only numbers and dashes
-    if (preg_match('/^[0-9\-]+$/', $grant) === 1) {
+    if (preg_match('/^[0-9\-]+$/', $grant->name)) {
+        echo("drin");
         // Add the object to the filtered list
-        $filteredObjects[] = $grant;
+        $filteredGrants[] = $grant;
     }
 }
 
+foreach ($filteredGrants as $grant){
+    $date = new DateTime($grant->allowedUntilDate);
+    $now = new DateTime('now', new DateTimeZone('UTC'));
+    if($date < $now){
+        deleteGrant($grant->id);
+    }
+}
