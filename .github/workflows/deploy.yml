@@ -1,0 +1,28 @@
+name: deploy
+on:
+  push:
+    branches:
+      - master 
+      - main
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get actions
+        uses: actions/checkout@v4
+        with:
+            lfs: 'true'
+
+      - name: 📂 Sync files
+        uses: pressidium/lftp-mirror-action@v1
+        with:
+          host: ${{ secrets.FTP_HOSTNAME }}
+          port: 23
+          user: ${{ secrets.FTP_USER }}
+          pass: ${{ secrets.FTP_PASSWORD }}
+          localDir: '.'
+          remoteDir: '.'
+          settings: 'sftp:auto-confirm=yes'
+          onlyNewer: true
