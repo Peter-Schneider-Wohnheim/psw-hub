@@ -1,6 +1,6 @@
 <?php
-require_once(dirname(__DIR__) . '/includes/config/mrbs.php');
-require_once(dirname(__DIR__) . '/includes/config/config.php');
+require_once(dirname(__DIR__) . '/config/mrbs.php');
+require_once(dirname(__DIR__) . '/config/config.php');
 
 function getAccessCode(): string
 {
@@ -19,13 +19,13 @@ function formatUnixTimestamp($timestamp): string
     return $formatted_date;
 }
 
-function getKitchenReservationsForUser(){
+function getKitchenReservationsForUser($username){
     global $mrbs;
 
     $one_day_ago = time() - 86400;
 
     $stmt = $mrbs->prepare("SELECT * FROM `mrbs_entry` WHERE room_id=4 AND create_by=:username AND start_time >= :oneDayAgo");
-    $stmt->bindParam('username', $_SESSION['username']);
+    $stmt->bindParam('username', $username);
     $stmt->bindParam('oneDayAgo', $one_day_ago, PDO::PARAM_INT);
     $stmt->execute();
     return $stmt->fetchAll();
@@ -116,8 +116,8 @@ function getGrants(){
     return json_decode($response);
 }
 
-function getGrantsForUser(){
-    return filterAccessCodes(getGrants(), $_SESSION['userID']);
+function getGrantsForUser($user_id){
+    return filterAccessCodes(getGrants(), $user_id);
 }
 
 function getBookingId($bookingName){

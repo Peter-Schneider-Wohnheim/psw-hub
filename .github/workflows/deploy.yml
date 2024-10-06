@@ -32,6 +32,12 @@ jobs:
           echo "define('mrbsDBName', '${{ secrets.MRBS_DB_NAME }}');" >> includes/config/config.php
           echo "define('mrbsDBUser', '${{ secrets.MRBS_DB_USER }}');" >> includes/config/config.php
           echo "define('mrbsDBPassword', '${{ secrets.MRBS_DB_PASSWORD }}');" >> includes/config/config.php
+          echo define('tenantlistDBServer', '${{ secrets.TENANTLIST_DB_SERVER }}');" >> includes/config/config.php
+          echo define('tenantlistDBName', '${{ secrets.TENANTLIST_DB_NAME }}');" >> includes/config/config.php
+          echo define('tenantlistDBUser', '${{ secrets.TENANTLIST_DB_USER }}');" >> includes/config/config.php
+          echo define('tenantlistDBPassword', '${{ secrets.TENANTLIST_DB_PASSWORD }}');" >> includes/config/config.php
+          echo define('WP_API_BASE', '${{ secrets.WP_API_BASE }}');" >> includes/config/config.php
+          echo define('WP_API_KEY', '${{ secrets.WP_API_KEY }}');" >> includes/config/config.php
           echo "define('PROD', true);" >> includes/config/config.php
 
       - name: 📂 Sync files

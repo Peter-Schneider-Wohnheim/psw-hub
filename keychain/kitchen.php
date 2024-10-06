@@ -1,6 +1,6 @@
 <?php
 include(dirname(__DIR__) . '/includes/header.inc.php');
-require_once(dirname(__DIR__) . '/keychain/kitchen.inc.php');
+require_once(dirname(__DIR__) . '/includes/controller/kitchen.inc.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['grantAccess'])) {
@@ -31,8 +31,8 @@ $accessCodeInfo = <<<ACCESSCODEINFO
 ACCESSCODEINFO;
 echo $accessCodeInfo;
 
-$grants = getGrantsForUser();
-$reservations = getKitchenReservationsForUser();
+$grants = getGrantsForUser($_SESSION['userID']);
+$reservations = getKitchenReservationsForUser($_SESSION['username']);
 echo('<h3 class="h2 mt-5">My reservations</h3>');
 if(count($reservations) > 0){
     foreach ($reservations as &$reservation) {
