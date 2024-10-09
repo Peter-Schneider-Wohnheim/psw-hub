@@ -19,7 +19,7 @@
             <a href="/index.php" style="text-decoration: none;">PSW Hub</a>
         </div>
         <div class="logout">
-            <a href="../auth/logout.php">
+            <a href="/auth/logout.php">
                 <i class="bi bi-person-lock"></i>
             </a>
         </div>
@@ -32,7 +32,8 @@
 session_start();
 if (!isset($_SESSION["userID"])) {
     if (strpos($_SERVER['SCRIPT_NAME'], 'login') === false) {
-        header("Location: auth/login.php");
+        $_SESSION['initial_request'] = $_SERVER['REQUEST_URI'];
+        header("Location: /auth/login.php");
         exit();
     }
 }

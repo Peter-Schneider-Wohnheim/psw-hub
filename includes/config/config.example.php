@@ -18,4 +18,5 @@ define('tenantlistDBUser', '');
 define('tenantlistDBPassword', '');
 define('WP_API_BASE', 'https://wp.test.psw-wuerzburg.de/wp-json/wp/v2');
 define('WP_API_KEY', '');
+define('EVENT_CALENDER_ID', '');
 define('PROD', false);

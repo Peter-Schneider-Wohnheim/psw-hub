@@ -38,6 +38,7 @@ jobs:
           echo "define('tenantlistDBPassword', '${{ secrets.TENANTLIST_DB_PASSWORD }}');" >> includes/config/config.php
           echo "define('WP_API_BASE', '${{ secrets.WP_API_BASE }}');" >> includes/config/config.php
           echo "define('WP_API_KEY', '${{ secrets.WP_API_KEY }}');" >> includes/config/config.php
+          echo "define('EVENT_CALENDER_ID', '${{ secrets.EVENT_CALENDER_ID }}');" >> includes/config/config.php
           echo "define('PROD', true);" >> includes/config/config.php
 
       - name: 📂 Sync files

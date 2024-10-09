@@ -58,7 +58,13 @@ if (isset($_GET['code'])) {
     $_SESSION['phone'] = $user_data['user_phone_number'];
     $_SESSION['roles'] = $user_data['user_roles'];
 
-    header("Location:../index.php");
+    if (isset($_SESSION['initial_request'])) {
+        $redirect_url = $_SESSION['initial_request'];
+        unset($_SESSION['initial_request']);
+        header("Location: " . $redirect_url);
+    } else {
+        header("Location:../index.php");
+    }
     exit();
 } else {
     echo '<p>No code parameter received. Please try signing in again.</p>';
