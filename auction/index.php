@@ -8,7 +8,7 @@ echo('<h2 class="h2 text-center mb-3">Bike Auction</h2>');
     <p>In February, bikes without an owner have been collected on the property. You now have the opportunity to buy one of those bikes.</p>
 
 <h3 class="h3 mt-5">1. Select a Bike</h3>
-<p>You can find photos of all bikes here: <a href="https://cloud.psw-wuerzburg.de/index.php/f/3365">PSW Cloud</a>.<br>
+<p>You can find photos of all bikes here: <a href="https://cloud.psw-wuerzburg.de/index.php/f/3365" target=”_blank”>PSW Cloud</a>.<br>
     Every bike has been assigned a unique number, the images are named accordingly. This number is also attached to the bike's handlebars
 with a red zip-tie. So, in case you want to see the bike in real, just go to the lower level of the parking lot behind house 3,
 and look for the bike. If you are interested in buying it, you can place a bid.</p>
@@ -77,7 +77,7 @@ if (($handle = fopen(AUCTION_DATA_SOURCE, "r")) !== FALSE) {
 ?>
 
     <h3 class="h3 mt-5">3. Place your bid</h3>
-    <p>Use this <a href="https://cloud.psw-wuerzburg.de/index.php/apps/forms/3BYDf279YtYtYmsG">form</a> to place your bid.</p>
+    <p>Use this <a href="https://cloud.psw-wuerzburg.de/index.php/apps/forms/3BYDf279YtYtYmsG" target=”_blank”>form</a> to place your bid.</p>
     <h3 class="h3 mt-5">4. Refresh this site</h3>
 <p>Your bid should now show up in the table. Come back regularly to check, if a higher bid was placed. In this case, just fill out the form from step 3 again to place a new, higher bid.</p>
 <?php
