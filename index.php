@@ -12,6 +12,7 @@ tile("https://psw-wuerzburg.de/wiki/", "Wiki", "bi-wikipedia");
 tile("/calendar", "Event Calendar", "bi-calendar-event");
 tile("https://booking.psw-wuerzburg.de/", "Room Booking", "bi-journal-bookmark-fill");
 tile("/keychain", "Keychain", "bi-key");
+tile("/auction", "Bike Auction", "bi-bicycle");
 tile("https://cloud.psw-wuerzburg.de", "Cloud", "bi-cloud");
 
 echo('</div>');
