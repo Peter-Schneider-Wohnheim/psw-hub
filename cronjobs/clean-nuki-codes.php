@@ -14,8 +14,8 @@ foreach ($allGrants as $grant) {
 }
 
 foreach ($filteredGrants as $grant){
-    $date = new DateTime($grant->allowedUntilDate);
-    $now = new DateTime('now', new DateTimeZone('UTC'));
+    $date = new DateTime($grant->allowedUntilDate, new DateTimeZone('Europe/Berlin'));
+    $now = new DateTime('now', new DateTimeZone('Europe/Berlin'));
     if($date < $now){
         deleteGrant($grant->id);
     }

@@ -15,7 +15,8 @@ function formatUnixTimestamp($timestamp): string
 {
     $date = new DateTime();
     $date->setTimestamp($timestamp);
-    $formatted_date = $date->format('Y-m-d\TH:i:s.v\Z');
+    $date->setTimezone(new DateTimeZone('Europe/Berlin')); // Set the correct time zone
+    $formatted_date = $date->format('Y-m-d\TH:i:s.vP'); // Use 'P' to include the timezone offset
     return $formatted_date;
 }
 
