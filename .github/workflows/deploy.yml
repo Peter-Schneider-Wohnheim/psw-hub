@@ -39,7 +39,12 @@ jobs:
           echo "define('WP_API_BASE', '${{ secrets.WP_API_BASE }}');" >> includes/config/config.php
           echo "define('WP_API_KEY', '${{ secrets.WP_API_KEY }}');" >> includes/config/config.php
           echo "define('EVENT_CALENDER_ID', '${{ secrets.EVENT_CALENDER_ID }}');" >> includes/config/config.php
-          echo "define('AUCTION_DATA_SOURCE', '${{ secrets.AUCTION_DATA_SOURCE }}');" >> includes/config/config.php
+          
+          echo "define('hubDBName', '${{ secrets.HUB_DB_NAME }}');" >> includes/config/config.php
+          echo "define('hubDBPassword', '${{ secrets.HUB_DB_PASSWORD }}');" >> includes/config/config.php
+          echo "define('hubDBServer', '${{ secrets.HUB_DB_SERVER }}');" >> includes/config/config.php
+          echo "define('hubDBUser', '${{ secrets.HUB_DB_USER }}');" >> includes/config/config.php
+          
           echo "define('PROD', true);" >> includes/config/config.php
 
       - name: 📂 Sync files

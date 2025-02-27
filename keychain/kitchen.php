@@ -17,10 +17,10 @@ echo '<h2 class="h2 mb-3">Kitchen Reservations</h2>';
 $accessCodeInfo = <<<ACCESSCODEINFO
 <div class="alert alert-primary" role="alert">
   <p>Your access code is: <span class="font-monospace">$accessCode</span></p>
-  To use it, head to <a href="https://booking.psw-wuerzburg.de/index.php?area=3" target="_blank">booking.psw-wuerzburg.de</a> and place
+  <p>To use it, head to <a href="https://booking.psw-wuerzburg.de/index.php?area=3" target="_blank">booking.psw-wuerzburg.de</a> and place
   your booking for the kitchen. Afterward, return to this site, select the booking and click on "Grant access". 
   Your code will then be authorized to open the door in the selected timeframe. Without a booking, the code is invalid.
-  Your code can only be authorized for one booking at a time.
+  Your code can only be authorized for one booking at a time.</p>
 </div>
 <div class="alert alert-secondary" role="alert">
   Unfortunately, remote access to the lock is sometimes a bit slow or the connection is unstable. 
