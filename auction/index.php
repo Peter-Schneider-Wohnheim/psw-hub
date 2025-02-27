@@ -9,7 +9,7 @@ $auction_active=true;
 
 if($auction_active){
 ?>
-    <p>In February, bikes without an owner have been collected on the property. You now have the opportunity to buy one
+    <p>In February 2024, bikes without an owner have been collected on the property. You now have the opportunity to buy one
         of those bikes.</p>
 
     <h3 class="h3 mt-5">1. Select a Bike</h3>
@@ -80,7 +80,7 @@ try {
 ?>
 
     <h3 class="h3 mt-5">3. Place your bid</h3>
-    <p>By filling out the form, you place a binding bid. The highest bid will receive the bike. Starting bid is 5 €.Your
+    <p>By filling out the form, you place a binding bid. The highest bid will receive the bike. Starting bid is 5 €. Your
         bid is binding. That means, if you are the highest bidder, you are required to pay the selected price.</p>
     <div class="alert alert-danger" role="alert">
         Your bid is binding. That means, if you are the highest bidder, you are required to pay the selected price.
