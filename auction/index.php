@@ -13,7 +13,7 @@ if($auction_active){
         of those bikes.</p>
 
     <h3 class="h3 mt-5">1. Select a Bike</h3>
-    <p>You can find photos of all bikes here: <a href="https://cloud.psw-wuerzburg.de/index.php/f/3365" target=”_blank”>PSW
+    <p>You can find photos of all bikes here: <a href="https://cloud.psw-wuerzburg.de/index.php/s/gK3gjHFwSy7cgLj" target=”_blank”>PSW
             Cloud</a>.<br>
         Every bike has been assigned a unique number, the images are named accordingly. This number is also attached to
         the bike's handlebars
