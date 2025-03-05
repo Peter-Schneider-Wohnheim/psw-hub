@@ -129,6 +129,25 @@ try {
                 <option value="260">260 €</option>
                 <option value="280">280 €</option>
                 <option value="300">300 €</option>
+                <option value="350">350 €</option>
+                <option value="400">400 €</option>
+                <option value="450">450 €</option>
+                <option value="500">500 €</option>
+                <option value="550">550 €</option>
+                <option value="600">600 €</option>
+                <option value="650">650 €</option>
+                <option value="700">700 €</option>
+                <option value="750">750 €</option>
+                <option value="800">800 €</option>
+                <option value="850">850 €</option>
+                <option value="900">900 €</option>
+                <option value="950">950 €</option>
+                <option value="1000">1000 €</option>
+                <option value="1100">1100 €</option>
+                <option value="1200">1200 €</option>
+                <option value="1300">1300 €</option>
+                <option value="1400">1400 €</option>
+                <option value="1500">1500 €</option>
             </select>
         </div>
         <button type="submit" class="btn btn-primary mt-3">Place bid</button>
