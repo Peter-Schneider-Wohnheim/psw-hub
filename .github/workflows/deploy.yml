@@ -44,6 +44,8 @@ jobs:
           echo "define('hubDBPassword', '${{ secrets.HUB_DB_PASSWORD }}');" >> includes/config/config.php
           echo "define('hubDBServer', '${{ secrets.HUB_DB_SERVER }}');" >> includes/config/config.php
           echo "define('hubDBUser', '${{ secrets.HUB_DB_USER }}');" >> includes/config/config.php
+          echo "define('AUCTION_ACTIVE', true);" >> includes/config/config.php
+          echo "define('AUCTION_BIDDING_AVAILABLE', false);" >> includes/config/config.php
           
           echo "define('PROD', true);" >> includes/config/config.php
 
