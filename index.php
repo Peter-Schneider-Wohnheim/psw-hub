@@ -13,7 +13,7 @@ if (in_array("tutor", $_SESSION['roles']) or in_array("administrator", $_SESSION
     tile("https://booking.psw-wuerzburg.de/report.php", "Room Bookings", "bi-calendar-week");
     echo('</div>');
 }
-echo('<h3 class="h3 mb-4 mt-3">Tenant</h3>');
+echo('<h3 class="h3 mb-4 mt-5">Tenant</h3>');
 echo('<div class="tiles-container">');
 tile("https://psw-wuerzburg.de/wiki/", "Wiki", "bi-wikipedia");
 tile("https://booking.psw-wuerzburg.de/", "Room Booking", "bi-journal-bookmark-fill");
