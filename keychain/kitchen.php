@@ -13,14 +13,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 $accessCode = getAccessCode();
 
-echo '<h2 class="h2 mb-3">Kitchen Reservations</h2>';
+echo '<h2 class="h2 mb-3">Kitchen Access Code</h2>';
 $accessCodeInfo = <<<ACCESSCODEINFO
+<p>Our dorm features a complete kitchen you can rent to cook with your friends! Mostly, people will refer to this as "Backraum". It is located in the basement of house 5. To access it using the electronic lock, follow these steps:</p>
+<ol>
+    <li>Place an reservation via <a href="https://booking.psw-wuerzburg.de" target="_blank">our booking system</a>. By placing an booking, you accept the terms described <a href="https://psw-wuerzburg.de/wiki/room-booking" target="_blank">here</a>. Read them carefully!</li>
+    <li>Come back to this site to validate the 6-digit access code displayed below for the booked timeframe.</li>
+    <li>Select the booking in the list below and click on "Grant access". Your code will then be authorized to open the door in the selected timeframe. <strong>If you skip this step, the code will not work!</strong></li>
+</ol>
+<p>You can now enter the room in the booked timeslot. As soon as the timeslot is over, your code becomes invalid. Be aware your code can only be authorized for one booking at a time.</p>
+<p>More information on the kitchen and the lock can be found <a href="https://psw-wuerzburg.de/wiki/kitchen/" target="_blank">here</a>.</p>
 <div class="alert alert-primary" role="alert">
-  <p>Your access code is: <span class="font-monospace">$accessCode</span></p>
-  <p>To use it, head to <a href="https://booking.psw-wuerzburg.de/index.php?area=3" target="_blank">booking.psw-wuerzburg.de</a> and place
-  your booking for the kitchen. Afterward, return to this site, select the booking and click on "Grant access". 
-  Your code will then be authorized to open the door in the selected timeframe. Without a booking, the code is invalid.
-  Your code can only be authorized for one booking at a time.</p>
+  Your access code is: <span class="font-monospace">$accessCode</span>
 </div>
 <div class="alert alert-secondary" role="alert">
   Unfortunately, remote access to the lock is sometimes a bit slow or the connection is unstable. 
@@ -103,7 +107,7 @@ if(count($reservations) > 0){
     }
 } else {
    $noReservations = <<<NORESERVATIONS
-    <div class="alert alert-warning" role="alert">
+    <div class="alert alert-warning mt-3" role="alert">
       You have no active bookings yet.
     </div>
     NORESERVATIONS;
