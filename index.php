@@ -9,7 +9,7 @@ if (in_array("tutor", $_SESSION['roles']) or in_array("administrator", $_SESSION
     echo('<div class="tiles-container">');
     tile("https://cloud.psw-wuerzburg.de/index.php/f/3457", "Files, Mails & more", "bi-file-earmark-richtext");
     tile("/tutor/tenants", "Tenant List", "bi-person-lines-fill");
-    tile("https://psw-wuerzburg.de/wp-admin/", "WordPress Backend", "bi-person-lines-fill");
+    tile("https://psw-wuerzburg.de/wp-admin/", "WordPress Backend", "bi-wordpress");
     tile("https://booking.psw-wuerzburg.de/report.php", "Room Bookings", "bi-calendar-week");
     echo('</div>');
 }
