@@ -20,6 +20,6 @@ define('WP_API_BASE', 'https://wp.test.psw-wuerzburg.de/wp-json/wp/v2');
 define('WP_API_KEY', '');
 define('EVENT_CALENDER_ID', '');
 define('AUCTION_DATA_SOURCE', '');
-define('AUCTION_ACTIVE', '');
-define('AUCTION_BIDDING_AVAILABLE', '');
+define('AUCTION_ACTIVE', true);
+define('AUCTION_BIDDING_AVAILABLE', false);
 define('PROD', false);
