@@ -10,7 +10,7 @@ if (in_array("tutor", $_SESSION['roles']) or in_array("administrator", $_SESSION
     tile("https://com.psw-wuerzburg.de/login?oauth=1&oauth_provider=0", "Mail", "bi-envelope-at");
     tile("https://cloud.psw-wuerzburg.de/index.php/f/3457", "Files", "bi-file-earmark-richtext");
     tile("https://booking.psw-wuerzburg.de/report.php", "Room Bookings", "bi-calendar-week");
-    tile("https://cloud.psw-wuerzburg.de/index.php/apps/sociallogin/custom_oauth2/PSW-Account", "Nextcloud", "bi-cloud");
+    tile("https://cloud.psw-wuerzburg.de/", "Nextcloud", "bi-cloud");
     tile("/tutor/tenants", "Tenant List", "bi-person-lines-fill");
     tile("https://psw-wuerzburg.de/wp-admin/", "WordPress Backend", "bi-wordpress");
     echo('</div>');
@@ -23,7 +23,7 @@ tile("/keychain", "Keychain", "bi-key");
 tile("/calendar", "Event Calendar", "bi-calendar-event");
 tile("/vodafone", "Vodafone Customer ID", "bi-router");
 //tile("/auction", "Bike Auction", "bi-bicycle");
-tile("https://cloud.psw-wuerzburg.de/index.php/apps/sociallogin/custom_oauth2/PSW-Account", "Nextcloud", "bi-cloud");
+tile("https://cloud.psw-wuerzburg.de/", "Nextcloud", "bi-cloud");
 
 echo('</div>');
 
